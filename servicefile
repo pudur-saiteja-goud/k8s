@@ -1,3 +1,6 @@
+## labels should be same in both file 
+
+
 ---
 apiVersion: v1
 kind: Service
