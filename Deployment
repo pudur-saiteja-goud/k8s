@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mustafa
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: qwer
+  template:
+    metadata:
+      labels:
+        app: qwer
+    spec:
+      containers:
+        - name: cont11
+          image: shaikmustafa/dm
+          ports:
+            - containerPort: 80
+...
+
+###Servicefile
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: teja
+spec:
+  type: LoadBalancer
+  selector:
+    app: qwer
+  ports:
+    - port: 80
+      targetPort: 80
+~                      
+
+
+
+~                                                      
